@@ -1,0 +1,12 @@
+PODS:
+  - Accengage-iOS-SDK (6.1.3)
+
+DEPENDENCIES:
+  - Accengage-iOS-SDK (~> 6.1)
+
+SPEC CHECKSUMS:
+  Accengage-iOS-SDK: aef67c0bdfeff70439613afabbd213139de97f7d
+
+PODFILE CHECKSUM: 43a0b9652a73783d5ba9f3019249a4b5ebbc3a62
+
+COCOAPODS: 1.3.1
