@@ -35,10 +35,8 @@
 
   // * Set up Accengage *//
   ACCConfiguration *config = [[ACCConfiguration alloc] init];
-  [config setAutomaticPushDelegateEnabled:false];
+  [config setAutomaticPushDelegateEnabled:true];
   [Accengage startWithConfig:config];
-  
-   [UNUserNotificationCenter currentNotificationCenter].delegate = self;
   
   return YES;
   
@@ -47,7 +45,6 @@
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(nonnull NSData *)deviceToken
 {
   NSLog(@"didRegisterForRemoteNotificationsWithDeviceToken");
-  [[Accengage push] didRegisterForUserNotificationsWithDeviceToken:deviceToken];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(nonnull NSError *)error
