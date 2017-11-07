@@ -38,6 +38,15 @@
   [config setAutomaticPushDelegateEnabled:true];
   [Accengage startWithConfig:config];
   
+
+  //Request authorization for push notifications
+  [UNUserNotificationCenter.currentNotificationCenter requestAuthorizationWithOptions:(UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+    NSLog(@"Request Authorization for push notifications");
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [[UIApplication sharedApplication] registerForRemoteNotifications];
+    });
+  }];
+  
   return YES;
   
 }
